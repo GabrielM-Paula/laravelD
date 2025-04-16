@@ -13,9 +13,7 @@ class Personagens extends Controller
     
     function salvarPersonagem(Request $dados){
         $personagem = new Personagem();
-        $personagem = dados->all();
-        $personagem->save();
-
+        $personagem->create($dados->all());
     }
     
     function listPersonagem(){
